@@ -1,0 +1,183 @@
+.resource-bar {
+    width: 100%;
+    padding: 20px 24px;
+
+    background: #202b25;
+    border-bottom: 2px solid #435344;
+
+    box-sizing: border-box;
+}
+
+.resource-bar__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.resource-bar__title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 190px;
+}
+
+.resource-bar__title h2 {
+    margin: 0;
+
+    color: #f0e8d5;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.resource-bar__title span {
+    color: #aab5a6;
+    font-size: 13px;
+}
+
+.resource-bar__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+
+    gap: 12px;
+    flex: 1;
+}
+
+.resource-card {
+    min-width: 0;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+.resource-card__icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.resource-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    min-width: 0;
+}
+
+.resource-card__name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    opacity: 0.8;
+}
+
+.resource-card__amount {
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Дерево */
+
+.resource-wood {
+    background: #304b39;
+    color: #a4d3a9;
+}
+
+/* Камень */
+
+.resource-stone {
+    background: #394451;
+    color: #c0ccdc;
+}
+
+/* Еда */
+
+.resource-food {
+    background: #51472e;
+    color: #e9ce82;
+}
+
+/* Золото */
+
+.resource-gold {
+    background: #5b4927;
+    color: #f4d273;
+}
+
+/* ----------------------------------------------Планшеты -------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+    .resource-bar__container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resource-bar__title {
+        min-width: auto;
+    }
+
+    .resource-bar__list {
+        width: 100%;
+    }
+}
+
+/* --------------------------------- Мобильные устройства -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    .resource-bar {
+        padding: 16px;
+    }
+
+    .resource-bar__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .resource-card {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .resource-card__icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .resource-card__amount {
+        font-size: 18px;
+    }
+
+    .resource-card__name {
+        font-size: 10px;
+    }
+
+    .resource-bar__title h2 {
+        font-size: 19px;
+    }
+}

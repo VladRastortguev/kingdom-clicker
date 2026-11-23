@@ -1,0 +1,325 @@
+/* Торговая лавка */
+.trading-shop {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.trading-shop__header {
+    margin-bottom: 20px;
+}
+
+.trading-shop__header h2 {
+    margin:  0;
+
+    color: #f0e8d5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.trading-shop__header p {
+    margin: 8px 0 0;
+
+    color: #aab5a6;
+    font-size: 14px;
+}
+
+.trading-shop__list {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+/* Общая карточка */
+.trading-card {
+    width: 100%;
+    min-width: 0;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+
+    color: #f0e8d5;
+    font-family: inherit;
+    text-align: center;
+
+    transition: 
+        transform 0.15s ease,
+        filter 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.trading-card:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.trading-card:focus-within {
+    border-color: #e9ce82;
+}
+
+/* Дерево */
+.trading-card--wood {
+    background: #304b39;
+    border-color: #46694e;
+}
+
+.trading-card--wood .trading-card__icon {
+    color: #a4d3a9;
+}
+
+/* Камень */
+.trading-card--stone {
+    background: #394451;
+    border-color: #566477;
+}
+
+.trading-card--stone .trading-card__icon {
+    color: #c0ccdc;
+}
+
+/* еда */
+.trading-card--food {
+    background: #51472e;
+    border-color: #75613b;
+}
+
+.trading-card--food .trading-card__icon {
+    color: #e9ce82;
+}
+
+/* Иконка */
+.trading-card__icon {
+    margin-bottom: 14px;
+}
+
+/* Информация о ресурсе */
+.trading-card__content {
+    width: 100%;
+}
+
+.trading-card__content h3 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.trading-card__content p {
+    min-height: 40px;
+    margin: 8px 0 16px;
+
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+/* Запас ресурса */
+.trading-card__stock {
+    width: 100%;
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+}
+
+.trading-card__stock span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.trading-card__stock strong {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Цена продажи */
+.trading-card__price {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+}
+
+.trading-card__price span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.trading-card__price strong {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 16px;
+    color: #e9ce82;
+}
+
+/* Количество */
+.trading-card__label {
+    width: 100%;
+    margin-top: 16px;
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-align: left;
+}
+
+.trading-card__input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 11px 12px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+
+    color: #f0e8d5;
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.trading-card__input:focus {
+    border-color: #e9ce82;
+}
+
+.trading-card__input:disabled {
+    opacity: 0.5;
+}
+
+/* Предварительная выручка */
+.trading-card__revenue {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.trading-card__revenue span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+.trading-card__revenue strong {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #e9ce82;
+    font-size: 18px;
+}
+
+/* Кнопки продажи */
+.trading-card__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.trading-card__action {
+    width: 100%;
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+
+    color: #f0e8d5;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 
+        background 0.15s ease,
+        filter 0.15s ease,
+        transform 0.15s ease;
+}
+
+.trading-card__action:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.18);
+    filter: brightness(1.1);
+}
+
+.trading-card__action:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.trading-card__action:focus-visible {
+    outline: 3px solid #e9ce82;
+    outline-offset: 3px;
+}
+
+.trading-card__action-all {
+    background: rgba(233, 206, 130, 0.15);
+    border-color: gba(233, 206, 130, 0.2);
+    color: #e9ce82;
+}
+
+.trading-card__action-all:hover:not(:disabled) {
+    background: rgba(233, 206, 130, 0.25);
+}
+
+.trading-card__action-all:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ------------------------------------ Планшеты ------------------------------------------- */
+@media (max-width: 900px) {
+    .trading-shop__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ------------------------------ Мобильные устройства ------------------------------------------- */
+@media (max-width: 600px) {
+    .trading-shop {
+        margin-top: 24px;
+    }
+
+    .trading-shop__header h2 {
+        font-size: 21px;
+    }
+
+    .trading-shop__list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .trading-card {
+        padding: 18px;
+    }
+
+    .trading-card__content p {
+        min-height: auto;
+    }
+}
