@@ -1,0 +1,196 @@
+.gathering-panel {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.gathering-panel__header {
+    margin-bottom: 20px;
+}
+
+.gathering-panel__header h2 {
+    margin: 0;
+
+    color: #f0e8d5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.gathering-panel__header p {
+    margin: 8px 0 0;
+
+    color: #aab5a6;
+    font-size: 14px;
+}
+
+.gathering-panel__list {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+/* Общая карточка */
+
+.gathering-card {
+    width: 100%;
+    min-width: 0;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+
+    color: #f0e8d5;
+    font-family: inherit;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 
+        transform 0.15s ease,
+        filter 0.15s ease,
+        border-color 0.15s ease;
+}
+    
+.gathering-card:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.gathering-card:active {
+    transform: scale(0.98);
+}
+
+.gathering-card:focus-visible {
+    outline: 3px solid #e9ce82;
+    outline-offset: 3px;
+}
+
+/* Дерево */
+.gathering-card--wood {
+    background: #304b39;
+    border-color: #46694e;
+}
+    
+.gathering-card--wood .gathering-card__icon {
+    color: #a4d3a9;
+}
+
+/* Камень */
+.gathering-card--stone {
+    background: #394451;
+    border-color: #566477;
+}
+
+.gathering-card--stone .gathering-card__icon {
+    color: #c0ccdc;
+}
+
+/* Еда */
+.gathering-card-food {
+    background: #51472e;
+    border-color: #75613b;
+}
+
+.gathering-card-food .gathering-card__icon {
+    color: #e9ce82;
+}
+
+/* Иконка */
+.gathering-card__icon {
+    margin-bottom: 14px;
+}
+
+/* Информация */
+.gathering-card__content {
+    width: 100%;
+}
+
+.gathering-card__content h3 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.gathering-card__content p {
+    min-height: 40px;
+    margin: 8px 0 16px;
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Сила добычи */
+.gathering-card__power {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 12px;
+
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+}
+
+.gathering-card__power span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.gathering-card__power strong {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Кнопка действия */
+
+.gathering-card__action {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --------------------------------------- Планшеты ------------------------------------------- */
+
+@media (max-width: 900px) {
+    .gathering-panel__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* --------------------------------- Мобильные устройства ------------------------------------------- */
+
+@media (max-width: 600px) {
+    .gathering-panel {
+        margin-top: 24px;
+    }
+
+    .gathering-panel__header h2 {
+        font-size: 21px;
+    }
+
+    .gathering-panel__list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .gathering-card {
+        padding: 18px;
+    }
+
+    .gathering-card__content p {
+        min-height: auto;
+    }
+}

@@ -1,0 +1,282 @@
+.upgrade-shop {
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.upgrade-shop__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.upgrade-shop__header h2 {
+    margin: 0;
+    color: #f0e8d5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.upgrade-shop__header p {
+    margin: 8px 0 0;
+
+    color: #aab5a6;
+    font-size: 14px;
+}
+
+.upgrade-shop__balance {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 16px;
+
+    background: #514323;
+    border: 1px solid #75613b;
+    border-radius: 10px;
+
+    color: #f4d273;
+}
+
+.upgrade-shop__balance strong {
+    font-size: 18px;
+}
+
+.upgrade-shop__balance span {
+    font-size: 12px;
+}
+
+/* Список улучшений */
+
+.upgrade-shop__list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+/* Карточка */
+
+.upgrade-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    min-width: 0;
+    padding: 18px;
+
+    background: #26352b;
+    border: 1px solid #405443;
+    border-radius: 14px;
+
+    transition: 
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+.upgrade-card:hover {
+    border-color: #718b70;
+    background: #2c3d31;
+}
+
+.upgrade-card--purchased {
+    background-color: #5b8d64;
+    background: #293f30;
+}
+
+/* Иконка */
+
+.upgrade-card__icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #e9ce82;
+    background: rgba(233, 206, 130, 0.1);
+    border-radius: 10px;
+}
+
+/* Содержимое */
+
+.upgrade-card__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.upgrade-card__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.upgrade-card__title h3 {
+    margin: 0;
+
+    color: #f0e8d5;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.upgrade-card__badge {
+    padding: 4px 8px;
+
+    color: #a9d8ae;
+    background: rgba(75, 145, 88, 0.2);
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.upgrade-card__description {
+    margin: 8px 0 12px;
+
+    color: #aab5a6;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Эффект */
+
+.upgrade-card__effect {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-bottom: 14px;
+}
+
+.upgrade-card__effect span {
+    color: #aab5a6;
+    font-size: 11px;
+}
+
+.upgrade-card__effect strong {
+    color: #b6d7a8;
+    font-size: 13px;
+}
+
+/* Нижняя часть */
+.upgrade-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.upgrade-card__pricce {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #f4d273;
+}
+
+.upgrade-card__pricce strong {
+    font-size: 15px;
+}
+
+.upgrade-card__pricce span {
+    font-size: 11px;
+}
+
+/* Кнопка */
+
+.upgrade-crad__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-height: 38px;
+    padding: 8px 13px;
+
+    color: #f0e8d5;
+    background: #526d4e;
+    border: 1px solid #6f8c69;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 
+        background 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.upgrade-crad__button:hover:not(:disabled) {
+    background: #66845f;
+}
+
+.upgrade-crad__button:disabled {
+    color: #9ba398;
+    background: #3a453c;
+    border-color: #4b564d;
+
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ------------------------------------ Планшеты -------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .upgrade-shop__list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------ Мобильные устройства --------------------------------------- */
+
+@media (max-width: 600px) {
+    .upgrade-shop {
+        margin-top: 30px;
+    }
+
+    .upgrade-shop__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .upgrade-shop__header h2 {
+        font-size: 21px;
+    }
+
+    .upgrade-card {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .upgrade-card__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .upgrade-card__title h3 {
+        font-size: 15px;
+    }
+
+    .upgrade-card__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .upgrade-crad__button {
+        width: 100%;
+    }
+}
